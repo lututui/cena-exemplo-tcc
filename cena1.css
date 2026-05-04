@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	image-rendering: pixelated;
+}
+
+body {
+	background: #0a0a0f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: 'Press Start 2P', monospace;
+	padding: 20px;
+}
+
+.label {
+	color: #4a90d9;
+	font-size: 8px;
+	letter-spacing: 2px;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.game-frame {
+	border: 3px solid #2a2a3a;
+	box-shadow: 0 0 0 1px #4a4a6a, 0 0 40px rgba(74, 144, 217, 0.15);
+	position: relative;
+}
+
+canvas {
+	display: block;
+}
+
+/* HUD overlay */
+.hud {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+}
+
+/* Top bar */
+.hud-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 8px 10px;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+}
+
+.sprint-info {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.sprint-title {
+	color: #ffd700;
+	font-size: 7px;
+	letter-spacing: 1px;
+}
+
+.sprint-sub {
+	color: #a0a0c0;
+	font-size: 6px;
+}
+
+.day-counter {
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(10, 10, 20, 0.9);
+	border: 1px solid #2a3a5a;
+	padding: 4px 12px;
+	color: #ffd700;
+	font-size: 7px;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
+
+.dialog {
+	position: absolute;
+	bottom: 44px;
+	left: 10px;
+	right: 10px;
+	background: rgba(8, 8, 18, 0.97);
+	border: 2px solid #4a90d9;
+	padding: 10px 12px;
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.dialog-avatar {
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	border: 1px solid #2a3a5a;
+}
+
+.dialog-content {
+	flex: 1;
+}
+
+.dialog-name {
+	color: #4dff91;
+	font-size: 6px;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
+}
+
+.dialog-text {
+	color: #d0d0e8;
+	font-family: 'VT323', monospace;
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+.dialog-cursor {
+	display: inline-block;
+	width: 8px;
+	height: 12px;
+	background: #4a90d9;
+	margin-left: 2px;
+	animation: blink 0.8s step-end infinite;
+	vertical-align: bottom;
+}
+
+.dialog-prompt {
+	color: #4a90d9;
+	font-size: 5px;
+	margin-top: 5px;
+	text-align: right;
+	letter-spacing: 1px;
+}

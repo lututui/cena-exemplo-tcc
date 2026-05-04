@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <title>Sprint Quest – Cena 1: Escritório</title>
+	  
+	  <link rel="stylesheet" href="cena1.css">
+   </head>
+   <body>
+      <div class="label">Cena 1 — Escritório 2D (Top-Down)</div>
+      <div class="game-frame">
+         <canvas id="c" width="640" height="360"></canvas>
+         <div class="hud">
+            <!-- Top HUD -->
+            <div class="hud-top">
+               <div class="sprint-info">
+                  <div class="sprint-title">▶ SPRINT A / B</div>
+                  <div class="sprint-sub">DIA X DE Y</div>
+               </div>
+               <div class="day-counter">⏱ DIA X — SPRINT A</div>
+            </div>
+            <!-- dialog box -->
+            <div class="dialog">
+               <canvas class="dialog-avatar" id="avatar" width="32" height="32"></canvas>
+               <div class="dialog-content">
+                  <div class="dialog-name">FULANO — PAPEL</div>
+                  <div class="dialog-text">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend. <span class="dialog-cursor"></span>
+                  </div>
+                  <div class="dialog-prompt">▼ ENTER para responder</div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  
+	  <script src="cena1.js"></script>
+   </body>
+</html>
