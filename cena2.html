@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sprint Quest – Cena 2: Kanban Board</title>
+
+    <link rel="stylesheet" href="cena2.css">
+  </head>
+  <body>
+    <div class="label">Cena 2 — Kanban Board (Execução da Sprint)</div>
+    <div class="game-frame" style="width:640px;">
+      <!-- TOP HUD -->
+      <div class="hud-top">
+        <div class="sprint-badge">SPRINT X</div>
+        <div class="stat-pill">
+          <div class="dot dot-red"></div>
+          <div class="lbl">PRAZO</div>
+          <div class="val">N DIAS</div>
+        </div>
+        <div class="hud-title">⊞ KANBAN BOARD</div>
+        <div class="hud-right">
+          <button class="btn-small">+ NOVA TASK</button>
+        </div>
+      </div>
+      <!-- BOARD -->
+      <div class="board">
+        <!-- TODO -->
+        <div class="column">
+          <div class="col-header todo">
+            <div class="col-name todo">TODO</div>
+            <div class="col-count count-todo">5</div>
+          </div>
+          <div class="col-body todo">
+            <div class="card feat">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 1</div>
+              <div class="card-meta">
+                <div class="tag tag-ui">UI</div>
+              </div>
+            </div>
+            <div class="card bug">
+              <div class="card-type type-bug">BUG</div>
+              <div class="card-title">Bug 1</div>
+              <div class="card-meta">
+                <div class="tag tag-auth">AUTH</div>
+                <div class="tag tag-urgent">URGENTE</div>
+              </div>
+            </div>
+            <div class="card chore">
+              <div class="card-type type-chore">CHORE</div>
+              <div class="card-title">Chore 1</div>
+            </div>
+            <div class="card feat">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 2</div>
+              <div class="card-meta">
+                <div class="tag tag-api">API</div>
+              </div>
+            </div>
+            <div class="card spike">
+              <div class="card-type type-spike">SPIKE</div>
+              <div class="card-title">Spike 1</div>
+            </div>
+          </div>
+        </div>
+        <!-- IN PROGRESS -->
+        <div class="column">
+          <div class="col-header doing">
+            <div class="col-name doing">EM PROGRESSO</div>
+            <div class="col-count count-doing">3</div>
+          </div>
+          <div class="col-body doing">
+            <div class="card feat">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 3</div>
+              <div class="card-meta">
+                <div class="assignee" style="background:#1a3a6a;color:#4a90d9;">A</div>
+                <div class="tag tag-api">API</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:60%"></div>
+              </div>
+            </div>
+            <div class="card chore">
+              <div class="card-type type-chore">CHORE</div>
+              <div class="card-title">Chore 2</div>
+              <div class="card-meta">
+                <div class="assignee" style="background:#1a3a1a;color:#4dff91;">B</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div class="card feat">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 4</div>
+              <div class="card-meta">
+                <div class="assignee" style="background:#2a1a3a;color:#aa4dff;">C</div>
+                <div class="tag tag-ui">UI</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- REVIEW -->
+        <div class="column">
+          <div class="col-header review">
+            <div class="col-name review">REVISÃO</div>
+            <div class="col-count count-review">2</div>
+          </div>
+          <div class="col-body review">
+            <div class="card bug">
+              <div class="card-type type-bug">BUG</div>
+              <div class="card-title">Bug 2</div>
+              <div class="card-meta">
+                <div class="assignee" style="background:#2a1a1a;color:#ff4d4d;">D</div>
+                <div class="tag tag-api">API</div>
+              </div>
+            </div>
+            <div class="card feat">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 5</div>
+              <div class="card-meta">
+                <div class="tag tag-db">DB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DONE -->
+        <div class="column">
+          <div class="col-header done">
+            <div class="col-name done">CONCLUÍDO</div>
+            <div class="col-count count-done">4</div>
+          </div>
+          <div class="col-body done" style="opacity:0.7">
+            <div class="card feat" style="opacity:0.8">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 6</div>
+            </div>
+            <div class="card chore" style="opacity:0.8">
+              <div class="card-type type-chore">CHORE</div>
+              <div class="card-title">Chore 3</div>
+            </div>
+            <div class="card bug" style="opacity:0.8">
+              <div class="card-type type-bug">BUG</div>
+              <div class="card-title">Bug 3</div>
+            </div>
+            <div class="card feat" style="opacity:0.8">
+              <div class="card-type type-feat">FEATURE</div>
+              <div class="card-title">Feature 7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BOTTOM BAR -->
+      <div class="hud-bottom">
+        <div class="legend-item">
+          <div class="legend-dot" style="border-color:#4a90d9"></div> FEATURE
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="border-color:#ff4d4d"></div> BUG
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="border-color:#4dff91"></div> CHORE
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="border-color:#aa4dff"></div> SPIKE
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
