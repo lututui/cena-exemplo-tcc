@@ -3,7 +3,7 @@ const ctx = c.getContext('2d');
 ctx.imageSmoothingEnabled = false;
 
 // Color palette
-const P = {
+const P_dark = {
     floor1: '#1a1a2e',
     floor2: '#16213e',
     wall: '#0f3460',
@@ -43,6 +43,54 @@ const P = {
     speechBubble3: '#ff4d4d',
     speechBubble4: '#fff',
 };
+
+const P_light = {
+    floor1: '#e8e8f0',
+    floor2: '#dcdce8',
+    wall: '#c8d4e8',
+    wallTop: '#b0c0d8',
+    wallDetail: 'rgba(0,0,0,0.04)',
+    desk: '#8aa8cc',
+    deskTop: '#6a8ab0',
+    deskLegs: '#5a7898',
+    plant: '#5a9a4a',
+    plantLeaf: '#4aaa5a',
+    window: '#5aa0e0',
+    windowGlow: '#8ac8ff',
+    carpet: '#ccd4e8',
+    carpetAccent: '#b8c4dc',
+    screen: '#d0e0f0',
+    screenOn: '#29c476',
+    npcSkin: '#c8843a',
+    npcHair: '#3d2b1f',
+    player: '#2a6aaa',
+    playerDark: '#1a4a7a',
+    playerHead: '#c09050',
+    playerHair: '#2a1a0a',
+    playerEyes: '#1a0a0a',
+    playerLegs: '#1a2a4a',
+    shadow: 'rgba(0,0,0,0.15)',
+    gridLine: 'rgba(0,0,0,0.04)',
+    monitorStand: '#5a7898',
+    monitor: '#2a4060',
+    screenContent1: 'rgba(0,0,0,0.2)',
+    screenContent2: '#006633',
+    screenContent3: '#2a6aaa',
+    keyboard: '#6a8ab0',
+    eyeColor: '#2a1a0a',
+    legsColor: '#3a4a6a',
+    speechBubble1: 'rgba(240,245,255,0.95)',
+    speechBubble2: '#2a6aaa',
+    speechBubble3: '#cc2a2a',
+    speechBubble4: '#1a1a2a',
+};
+
+const isDark = false;
+
+document.body.classList.toggle('theme-dark', isDark);
+document.body.classList.toggle('theme-light', !isDark);
+
+P = isDark ? P_dark : P_light;
 
 const W = 640;
 const H = 360;
